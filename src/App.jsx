@@ -1,35 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="main-container">
+      <div className="wrapper">
+        <div className="title">
+          <img src="./src/assets/images/logo.svg" className="logo" />
+          <i class="fa-regular fa-sun"></i>
+        </div>
+        <div className="title-active">
+          <h2>Extensions List</h2>
+          <div className="buttons">
+            <button className="button-active">All</button>
+            <button className="button-active">Active</button>
+            <button className="button-active">Inactive</button>
+          </div>
+        </div>
+        <div className="main-section">
+          <div>
+            <div className="box">
+              <img src="./src/assets/images/logo-devlens.svg" />
+              <div className="text">
+                <h3>DevLens</h3>
+                <p>
+                  Quickly inspect page layouts and visualize element boundaries.
+                </p>
+              </div>
+            </div>
+            <div>
+              <button>Remove</button>
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider round"></span>
+              </label>
+            </div>
+          </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
